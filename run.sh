@@ -10,7 +10,6 @@ cat << EOF > /cntlm.conf
 Proxy       ${CNTLM_PROXY}
 NoProxy     ${CNTLM_NO_PROXY}
 Auth        ${CNTLM_AUTH}
-Gateway     yes
 Listen      0.0.0.0:3128
 EOF
 
