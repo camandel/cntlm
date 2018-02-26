@@ -22,8 +22,9 @@ Usages examples :
  * With NTLMv2 authentication 
    * `docker run -it --rm --name mycntlm -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_PASSWORD=mypassword camandel/cntlm`
  * Discover best authentication available and hashes 
-   * `docker run -it  --rm -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_DOMAIN=mydomain camandel/cntlm "-H -M http://www.example.com"                                                                                                                               
-cntlm: Starting cntlm version 0.92.3 for LITTLE endian
+   * `docker run -it  --rm -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_DOMAIN=mydomain camandel/cntlm "-H -M http://www.example.com"`
+   
+`cntlm: Starting cntlm version 0.92.3 for LITTLE endian
 cntlm: Proxy listening on 0.0.0.0:3128
 cntlm: Workstation name used: 309cedf15530
 Password: ************************
@@ -37,6 +38,7 @@ PassNT          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 PassLM          yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 ------------------------------------------------
 cntlm: Terminating with 0 active threads`
+
 * With NTLM authentication and password hashes
   * `docker run -d  --name mycntlm -p 3128:3128 -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_DOMAIN=mydomain -e CNTLM_AUTH=NTLM -e CNTLM_PASSNT=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -e CNTLM_PASSLM=yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy cntlm`
   
