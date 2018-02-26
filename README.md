@@ -23,7 +23,6 @@ Usages examples :
    * `docker run -it --rm --name mycntlm -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_PASSWORD=mypassword camandel/cntlm`
  * Discover best authentication available and hashes 
    * `docker run -it  --rm -e CNTLM_PROXY=myproxy:8080 -e CNTLM_USERNAME=myuser -e CNTLM_DOMAIN=mydomain camandel/cntlm "-H -M http://www.example.com"                                                                                                                               
-
     cntlm: Starting cntlm version 0.92.3 for LITTLE endian
     cntlm: Proxy listening on 0.0.0.0:3128
     cntlm: Workstation name used: 309cedf15530
